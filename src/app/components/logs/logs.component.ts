@@ -20,7 +20,7 @@ export class LogsComponent implements OnInit {
         this.selectedLog = { id: '', text: '', date: '' }
       }
     });
-    this.logService.getLogs().subscribe(logs => { this.logs = logs });
+    this.logService.getLogs().subscribe(logs => { this.logs = logs; this.loaded = true; });
   }
 
   onSelect(log: Log) {
