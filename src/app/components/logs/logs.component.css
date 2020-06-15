@@ -1,3 +1,13 @@
 .log-date {
   color: #777;
+  margin-left: 10px;
+}
+
+.log-date::before {
+  content: "- ";
+}
+
+.fa-remove {
+  position: absolute;
+  right: 10px;
 }
