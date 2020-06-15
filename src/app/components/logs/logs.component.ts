@@ -20,4 +20,9 @@ export class LogsComponent implements OnInit {
     this.logService.setFormLog(log);
   }
 
+  onDelete(log: Log) {
+    console.log(log);
+    if (confirm("Are you sure?")) { this.logService.deleteLog(log) };
+  }
+
 }
