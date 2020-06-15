@@ -11,7 +11,8 @@ export class LogFormComponent implements OnInit {
   id: string;
   text: string;
   date: any;
-  log: string;
+
+  isNew: boolean = true;
 
   constructor(private logService: LogService) { }
 
@@ -19,11 +20,16 @@ export class LogFormComponent implements OnInit {
     // Subscribe to the selectedLog observable
     this.logService.selectedLog.subscribe(log => {
       if (log.id !== null) {
+        this.isNew = false;
         this.id = log.id;
         this.text = log.text;
         this.date = log.date;
       }
     });
+  }
+
+  onSubmit() {
+    console.log(123);
   }
 
 }

@@ -1,5 +1,5 @@
 <div class="card card-body mb-3">
-  <form>
+  <form (ngSubmit)="onSubmit()">
     <div class="form-group">
       <input
         type="text"
@@ -13,7 +13,7 @@
       type="submit"
       value="Add Log"
       class="btn btn-light"
-      [disabled]="!log"
+      [disabled]="!text"
     />
     <button type="button" class="btn btn-warning" [hidden]="!text">
       Clear
