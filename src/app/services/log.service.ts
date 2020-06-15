@@ -30,4 +30,14 @@ export class LogService {
   addLog(log: Log) {
     this.logs.unshift(log);
   }
+
+  updateLog(log: Log) {
+    this.logs.forEach((cur, index) => {
+      if (log.id === cur.id) {
+        this.logs.splice(index, 1);
+      }
+    });
+    this.logs.unshift(log);
+  }
+
 }

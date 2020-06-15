@@ -44,7 +44,7 @@ export class LogFormComponent implements OnInit {
         date: new Date()
       }
 
-      // this.logService.updateLog(updLog);
+      this.logService.updateLog(updLog);
     }
   }
 
