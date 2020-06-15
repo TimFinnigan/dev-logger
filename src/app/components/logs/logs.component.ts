@@ -16,4 +16,8 @@ export class LogsComponent implements OnInit {
     this.logs = this.logService.getLogs();
   }
 
+  onSelect(log: Log) {
+    console.log(log)
+  }
+
 }
