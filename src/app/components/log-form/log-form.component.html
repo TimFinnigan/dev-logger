@@ -4,9 +4,9 @@
       <input
         type="text"
         class="form-control"
-        name="log"
+        name="text"
         placeholder="Add a log..."
-        [(ngModel)]="log"
+        [(ngModel)]="text"
       />
     </div>
     <input
@@ -15,7 +15,7 @@
       class="btn btn-light"
       [disabled]="!log"
     />
-    <button type="button" class="btn btn-warning" [hidden]="!log">
+    <button type="button" class="btn btn-warning" [hidden]="!text">
       Clear
     </button>
   </form>
